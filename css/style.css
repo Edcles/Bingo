@@ -1,0 +1,39 @@
+/*
+1. Fuentes
+2. Etiquetas por defecto
+3. Etiquetas creadas
+*/
+
+/* 1.Fuentes */
+
+/* 2.Etiquetas por defecto*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+p{
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+/* 3.Etiquetas creadas */
+#Numero {
+    font-size:50px;
+    display:block;
+    margin: 20px auto;
+    width: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    background-color: #000;
+    color: #FFF;
+    text-align:center;
+}
