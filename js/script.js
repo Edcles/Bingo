@@ -1,14 +1,45 @@
+const width = 10;
+const numberSquares = [];
+let array = [];
+let x = 0;
+let divBolasSacadas = document.getElementById("numeroSacados");
 
 function getNumber() {
-    let bola = Math.floor(Math.random() * 98 + 1);
-    console.log(bola);
-
-    let divBola = document.getElementById("Numero");
-    divBola.textContent = bola;
-    
-    let numero = document.querySelectorAll(`.n${bola}`);
-      for (var i = 0; i < numero.length; ++i) {
-       numero[i].classList.add('tachado');
-      }
-
+    let bola = Math.floor(Math.random() * 99);
+    if(x == 99) {
+        alert('Partida terminada');
+        location.reload();
+    } else {
+        if (!array.includes(bola)){
+            let div = document.getElementById(bola);
+            //console.log(div);
+            array[x] = bola;
+            console.log(array[x]);
+            x++;
+            //console.log(bola);
+            
+            let divBola = document.getElementById("numero");
+            divBola.textContent = bola;
+            
+            if(div.innerHTML == bola && !array.includes(div.innerHTML)) {
+                div.style.textDecoration = "line-through";
+            }
+        } else {
+            console.log("repite");
+            getNumber();
+        }
+    }
 }
+
+function createBoard(grid, squares){
+    for (let i = 0; i < width*width; i++) {
+        const square = document.createElement('div');
+        square.setAttribute('id', i);
+        var texto = document.createTextNode(i);
+        square.appendChild(texto);
+        grid.appendChild(square);
+        squares.push(square);
+    }
+}
+
+createBoard (divBolasSacadas ,numberSquares)
