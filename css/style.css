@@ -49,8 +49,14 @@ h1{
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
-    background-color: blue;
+    background-color: white;
     margin: 2rem;
+}
+#numeroSacados img {
+    position: absolute;
+    z-index: 5px;
+    width: 30rem;
+    height: 30rem;
 }
 #numeroSacados div {
     width: 2.8rem;

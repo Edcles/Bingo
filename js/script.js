@@ -5,8 +5,8 @@ let x = 0;
 let divBolasSacadas = document.getElementById("numeroSacados");
 
 function getNumber() {
-    let bola = Math.floor(Math.random() * 99);
-    if(x == 99) {
+    let bola = Math.floor(Math.random() * 100);
+    if(x == 100) {
         alert('Partida terminada');
         location.reload();
     } else {
@@ -22,7 +22,9 @@ function getNumber() {
             divBola.textContent = bola;
             
             if(div.innerHTML == bola && !array.includes(div.innerHTML)) {
-                div.style.textDecoration = "line-through";
+                div.style.position = "relative";
+                div.style.backgroundColor = "white";
+                div.style.zIndex = "10px";
             }
         } else {
             console.log("repite");
