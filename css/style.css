@@ -30,18 +30,17 @@ h1{
     display: flex;
 }
 #numero {
-    font-size:5rem;
+    font-size:30rem;
     display:block;
-    width: 7rem;
-    height: 7rem;
-    line-height: 7rem;
+    width: 30rem;
+    height: 30rem;
+    line-height: 30rem;
     margin: 2rem auto;
     border-radius: 50%;
     background-color: #000;
     color: #FFF;
     text-align:center;
     justify-content: center;
-    border: 1px solid green;
 }
 #numeroSacados {
     width: 30rem;
@@ -66,5 +65,18 @@ h1{
     text-align: center;
 }
 #botonera {
-
+    display: flex;
+    justify-content: center;
+}
+.botonera {
+    width: 20rem;
+    height: 5rem;
+    font-size: 2rem;
+    margin: 2rem;
+    background-color: #E8917F;
+    border-radius: 20rem;
+    font-weight: bold;
+}
+.botonera:hover {
+    transform: scale(1.2);
 }
